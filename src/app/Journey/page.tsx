@@ -10,7 +10,7 @@ const Journey: React.FC = () => {
 
                     Today, I am working with Next.js, blending my skills across both front-end and back-end to build high-performance applications. My journey reflects a commitment to building digital experiences that are both functional and impactful.
 
-                    As I look to the future, my passion is pushing me toward Artificial Intelligence. The potential for AI to shape intelligent, adaptive digital solutions is incredibly inspiring, and I am excited to bring these tools into my work. This evolving journey is about more than just code—it's about staying on the cutting edge and embracing the endless possibilities technology offers.
+                    As I look to the future, my passion is pushing me toward Artificial Intelligence. The potential for AI to shape intelligent, adaptive digital solutions is incredibly inspiring, and I am excited to bring these tools into my work. This evolving journey is about more than just code—it&#39;s about staying on the cutting edge and embracing the endless possibilities technology offers.
                 </p>
             </div>
         </div>

@@ -23,7 +23,7 @@ const ContactPage = () => {
       {/* Left Side - Contact Form */}
       <div className="flex-1">
         <h1 className="text-3xl font-bold mb-4 text-[#f1c886]">Get in Touch</h1>
-        <p className="text-lg mb-8">We'd love to hear from you. Please fill out the form below to send us a message.</p>
+        <p className="text-lg mb-8">We&#39;d love to hear from you. Please fill out the form below to send us a message.</p>
         <div className="mb-8">
           <h2 className="text-xl font-semibold mb-4 text-[#f1c886]">Contact Information</h2>
           <ul className="space-y-4">

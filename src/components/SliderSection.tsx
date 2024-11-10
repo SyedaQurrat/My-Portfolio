@@ -1,6 +1,8 @@
 'use client';
 
 import { useState, useEffect } from 'react';
+import Image from 'next/image';
+
 
 interface SliderProps {
   images: string[];
@@ -16,12 +18,8 @@ const Slider: React.FC<SliderProps> = ({ images = [
   '/images/foody.jpg',
   '/images/result-Checker app.jpg',
   '/images/Node-Projects.jpg',
-  '/images/Expense-Tracker-App.jpg', 
+  '/images/Expense-Tracker-App.jpg',
   '/images/word-Counter.jpg',
-  
-  
-  
-  ,
 ] }) => {
   const [currentSlide, setCurrentSlide] = useState(0);
 
@@ -47,10 +45,12 @@ const Slider: React.FC<SliderProps> = ({ images = [
             key={index}
             className="w-1/2 flex-shrink-0 p-1"
           >
-            <img
+            <Image
               src={image}
               alt={`Slide ${index + 1}`}
-              className="w-full h-[400px] object-cover rounded-md" // Set fixed height and object-cover for uniform size
+              className="w-full h-[400px] object-cover rounded-md"
+              width={800} 
+              height={400} 
             />
           </div>
         ))}
@@ -59,9 +59,7 @@ const Slider: React.FC<SliderProps> = ({ images = [
         {images.map((_, index) => (
           <div
             key={index}
-            className={`w-2 h-2 rounded-full mx-1 ${
-              currentSlide === index ? 'bg-white' : 'bg-gray-400'
-            }`}
+            className={`w-2 h-2 rounded-full mx-1 ${currentSlide === index ? 'bg-white' : 'bg-gray-400'}`}
           />
         ))}
       </div>
@@ -70,4 +68,3 @@ const Slider: React.FC<SliderProps> = ({ images = [
 };
 
 export default Slider;
-

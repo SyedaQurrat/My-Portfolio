@@ -20,7 +20,7 @@ const HeroSection: React.FC = () => {
             Navigating Code & Intelligence <br /> Next.js, TypeScript & AI Enthusiast
           </h1>
           <p className="my-5 w-full text-[#f1c886] text-center text-[1.25rem] tracking-wider text-main sm:text-2xl md:w-[80%] md:text-left">
-            Passionate about building seamless user experiences with Next.js and TypeScript. Let’s collaborate!
+            Passionate about building seamless user experiences with Next.js and TypeScript. Let&#39;s collaborate!
           </p>
           <div className="mb-7 mt-5 flex flex-col items-center sm:mt-10 sm:flex-row sm:gap-5 md:mb-0">
             <a className="w-full md:w-auto" href="/contact">
