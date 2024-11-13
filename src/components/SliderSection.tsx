@@ -1,8 +1,6 @@
-'use client';
-
+'use client'; 
 import { useState, useEffect } from 'react';
 import Image from 'next/image';
-
 
 interface SliderProps {
   images: string[];
@@ -14,7 +12,7 @@ const Slider: React.FC<SliderProps> = ({ images = [
   '/images/Resume.jpg',
   '/images/To-Do-App.jpg',
   '/images/Assignment-45.jpg',
-  '/images/SQl.jpg',
+  '/images/SQL.jpg',
   '/images/foody.jpg',
   '/images/result-Checker app.jpg',
   '/images/Node-Projects.jpg',
@@ -35,7 +33,7 @@ const Slider: React.FC<SliderProps> = ({ images = [
 
   return (
     <div className="relative h-[550px] overflow-hidden mx-auto mt-10 mb-10 xl:w-[1300px] lg:w-[90%] w-[95%]">
-      <h1 className=" bg-[#f1c886] text-center text-4xl text-[#072638] p-5 font-extrabold mb-8"> Projects Highlight </h1>
+      <h1 className="bg-[#f1c886] text-center text-4xl text-[#072638] p-5 font-extrabold mb-8">Projects Highlight</h1>
       <div 
         className="flex transition-transform duration-500 gap-2" 
         style={{ transform: `translateX(-${currentSlide * 50}%)` }}
@@ -59,7 +57,8 @@ const Slider: React.FC<SliderProps> = ({ images = [
         {images.map((_, index) => (
           <div
             key={index}
-            className={`w-2 h-2 rounded-full mx-1 ${currentSlide === index ? 'bg-white' : 'bg-gray-400'}`}
+            className={`w-2 h-2 rounded-full mx-1 ${
+              currentSlide === index ? 'bg-white' : 'bg-gray-400'}`}
           />
         ))}
       </div>

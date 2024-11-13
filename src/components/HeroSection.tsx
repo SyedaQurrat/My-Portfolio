@@ -1,5 +1,5 @@
 'use client';
-
+import { useRouter } from "next/navigation";
 import Image from "next/image";
 
 const HeroSection: React.FC = () => {
@@ -42,15 +42,17 @@ const HeroSection: React.FC = () => {
 
         {/* Hero Image  */}
         <div className="relative mt-7 flex w-full items-end justify-end md:m-auto md:justify-end">
-          <Image
-            alt="Syeda Qurrat"
-            src="/images/image-6.png"
-            width={600}
-            height={800}
-            className="md:ml-24 h-auto max-w-full object-contain opacity-90"
-            loading="lazy"
-            decoding="async"
-          />
+          <div className="relative w-full h-[800px]">
+            <Image
+              alt="Syeda Qurrat"
+              src="/images/image-6.png"
+              layout="fill" 
+              objectFit="cover"
+              className="opacity-90"
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
         </div>
       </div>
     </div>

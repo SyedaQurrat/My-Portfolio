@@ -1,7 +1,11 @@
 'use client';
+import { useRouter } from 'next/navigation';
 import React from 'react';
-import { Mail, Phone , Linkedin, Github } from 'lucide-react';
+import { Mail, Phone, Linkedin, Github } from 'lucide-react';
+
 const Footer: React.FC = () => {
+  const router = useRouter();
+
   return (
     <footer className="bg-[#1f435a] w-full text-[#f1c886] py-20 px-24">
       <div className="grid grid-cols-1 gap-10 md:grid-cols-3 ">
@@ -15,19 +19,19 @@ const Footer: React.FC = () => {
             <a className="truncate hover:text-white" href="#">Portfolio</a>
 
             <div className="mt-5 flex flex-col gap-3 text-sm md:text-base">
-            <h1 className="text-xl font-bold text-[#f1c886]">App</h1>
-            <a className="truncate hover:text-white" href="/compulsory/3">Resume Builder</a>
-            <a className="truncate hover:text-white" href="/compulsory/3">To-Do-App</a>
-            <a className="truncate hover:text-white" href="/compulsory/3">Result Checker App</a>
-            <a className="truncate hover:text-white" href="/compulsory/3">Expense Tracker App</a>
-            <a className="truncate hover:text-white" href="/compulsory/3">Word Counter</a>
+              <h1 className="text-xl font-bold text-[#f1c886]">App</h1>
+              <a className="truncate hover:text-white" href="/compulsory/3">Resume Builder</a>
+              <a className="truncate hover:text-white" href="/compulsory/3">To-Do-App</a>
+              <a className="truncate hover:text-white" href="/compulsory/3">Result Checker App</a>
+              <a className="truncate hover:text-white" href="/compulsory/3">Expense Tracker App</a>
+              <a className="truncate hover:text-white" href="/compulsory/3">Word Counter</a>
             </div>
           </div>
         </div>
         
         {/* Column 2: Advance Courses */}
         <div>
-          <h2 className="text-xl font-bold mb-4" > Node Projects</h2>
+          <h2 className="text-xl font-bold mb-4">Node Projects</h2>
           <ul className="text-[#f1c886] space-y-2">
             <li><a href="https://github.com/SyedaQurrat/BMI-Calculater.git" className="hover:text-white">BMI-Calculater</a></li>
             <li><a href="https://github.com/SyedaQurrat/OOP_MY_BANK.git" className="hover:text-white">OOP_MY_BANK</a></li>
@@ -44,33 +48,31 @@ const Footer: React.FC = () => {
 
         {/* Column 3: Social Links */}
         <div className="flex flex-col md:flex-row gap-5">
-            <div className="mb-8">
-          <h2 className="text-xl font-semibold mb-4  text-[#f1c886]">Contact Information</h2>
-          <ul className="space-y-4">
-            <li className="flex items-center space-x-2">
-              <Mail className="w-5 h-5 text-[#f1c886]" />
-              <a href="#" className="text-lg hover:text-whitetransition hover:text-white duration-200">qurratnafees02@gmail.com</a>
-            </li>
-            <li className="flex items-center space-x-2">
-              <Phone className="w-5 h-5 text-[#f1c886]" />
-              <a href="tel:+1234567890" className="text-lg hover:text-white transition duration-200">+92 3302413208</a>
-            </li>
-            <li className="flex items-center space-x-2">
-              <Github className="w-5 h-5 text-[#f1c886]" />
-              <a href="https://github.com/SyedaQurrat" className="text-lg hover:text-white transition duration-200">https://github.com/SyedaQurrat</a>
-            </li>
-            <li className="flex items-center space-x-2">
-              <Linkedin className="w-5 h-5 text-[#f1c886]" />
-              <a href="https://www.linkedin.com/in/syeda-qurrat1991" className="text-lg hover:text-white transition duration-200">www.linkedin.com/in/syeda-qurrat1991</a>
-            </li>
-           
-          </ul>
-        </div>  
-          </div>
+          <div className="mb-8">
+            <h2 className="text-xl font-semibold mb-4 text-[#f1c886]">Contact Information</h2>
+            <ul className="space-y-4">
+              <li className="flex items-center space-x-2">
+                <Mail className="w-5 h-5 text-[#f1c886]" />
+                <a href="#" className="text-lg hover:text-white transition duration-200">qurratnafees02@gmail.com</a>
+              </li>
+              <li className="flex items-center space-x-2">
+                <Phone className="w-5 h-5 text-[#f1c886]" />
+                <a href="tel:+1234567890" className="text-lg hover:text-white transition duration-200">+92 3302413208</a>
+              </li>
+              <li className="flex items-center space-x-2">
+                <Github className="w-5 h-5 text-[#f1c886]" />
+                <a href="https://github.com/SyedaQurrat" className="text-lg hover:text-white transition duration-200">https://github.com/SyedaQurrat</a>
+              </li>
+              <li className="flex items-center space-x-2">
+                <Linkedin className="w-5 h-5 text-[#f1c886]" />
+                <a href="https://www.linkedin.com/in/syeda-qurrat1991" className="text-lg hover:text-white transition duration-200">www.linkedin.com/in/syeda-qurrat1991</a>
+              </li>
+            </ul>
+          </div>  
         </div>
+      </div>
     </footer>
   );
 };
 
 export default Footer;
-

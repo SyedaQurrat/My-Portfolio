@@ -1,3 +1,4 @@
+'use client';
 import React from 'react';
 import Image from 'next/image';
 
@@ -49,7 +50,7 @@ const Projects: React.FC = () => {
             <div className="border-2 overflow-hidden h-fit box_shadow rounded-lg flex flex-col justify-center items-center text-center text-zinc-600 text-lg font-bold">
               <div className="w-full h-[250px] overflow-hidden">
                 <Image
-                  alt="To-Do-App"
+                  alt="Resume Builder"
                   loading="lazy"
                   className="object-cover w-full h-full"
                   src="/images/Resume.jpg"

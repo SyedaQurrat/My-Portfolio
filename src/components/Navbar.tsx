@@ -1,5 +1,5 @@
 'use client';
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 
@@ -7,31 +7,25 @@ const Navbar: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const handleToggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen);
+    setIsMenuOpen(prevState => !prevState);
   };
 
-  // Prevent background scroll when the menu is open
+
   useEffect(() => {
-    if (isMenuOpen) {
-      document.body.style.overflow = 'hidden';
-    } else {
-      document.body.style.overflow = 'auto';
-    }
+    document.body.style.overflow = isMenuOpen ? 'hidden' : 'auto';
   }, [isMenuOpen]);
 
-  // Close the menu when a link is clicked
+
   const handleLinkClick = () => {
     setIsMenuOpen(false);
   };
 
   return (
-    <nav className="bg-[#f1c886] text-[#072638] py-4 px-6 flex items-center justify-between fixed top-0 left-0 w-full z-50">
+    <nav className="bg-[#f1c886] text-[#072638] py-4 px-6 flex items-center justify-between fixed top-0 left-0 w-full z-50 shadow-md">
       <div className="flex items-center space-x-4">
-        <Link href="/" passHref>
           <div className="flex items-center cursor-pointer">
             <Image src="/images/logo.png" alt="Logo" width={40} height={50} />
           </div>
-        </Link>
         <div className="text-lg font-semibold">
           <h1 className="font-semibold text-3xl mt-3">Syeda Qurrat</h1>
         </div>
@@ -56,7 +50,7 @@ const Navbar: React.FC = () => {
 
       {/* Mobile Dropdown Menu */}
       {isMenuOpen && (
-        <div className="fixed top-16 left-0 w-full bg-[#f1c886] text-[#072638] py-4 px-6 shadow-lg transition-all duration-300 ease-in-out ">
+        <div className="fixed top-16 left-0 w-full bg-[#f1c886] text-[#072638] py-4 px-6 shadow-lg transition-all duration-300 ease-in-out">
           <ul className="space-y-4 text-lg">
             <li><Link href="/" onClick={handleLinkClick} className="hover:text-[#e5b970]">Home</Link></li>
             <li><Link href="/Journey" onClick={handleLinkClick} className="hover:text-[#e5b970]">Journey</Link></li>
@@ -70,5 +64,3 @@ const Navbar: React.FC = () => {
 };
 
 export default Navbar;
-
-
