@@ -10,7 +10,7 @@ const About: React.FC = () => {
                 About me!
             </h1>
             <p className="sm:mt-10 mt-7 mb-8 xl:text-[1.25rem] sm:text-[1.2rem] text-[1rem] text-zinc-800 sm:tracking-wider tracking-normal text-center px-4 sm:px-10">
-                I am Syeda Qurrat, a passionate web developer skilled in HTML5, CSS3, Tailwind CSS, JavaScript, and TypeScript. I enjoy creating user-friendly web applications and constantly improving my coding techniques. Recently, I've started exploring Next.js, which has sharpened my ability to build fast, scalable web applications. With features like server-side rendering and static site generation, I look forward to creating dynamic and SEO-friendly websites that deliver seamless user experiences.
+                I am Syeda Qurrat, a passionate web developer skilled in HTML5, CSS3, Tailwind CSS, JavaScript, and TypeScript. I enjoy creating user-friendly web applications and constantly improving my coding techniques. Recently, I&#39;ve started exploring Next.js, which has sharpened my ability to build fast, scalable web applications. With features like server-side rendering and static site generation, I look forward to creating dynamic and SEO-friendly websites that deliver seamless user experiences.
             </p>
         </div>
     );
